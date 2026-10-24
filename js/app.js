@@ -8,7 +8,7 @@
   "use strict";
 
   const C = window.SITE_CONFIG || {};
-  const SUPABASE_SDK = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js";
+  const SUPABASE_SDK = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js";
   const MAX_UPLOAD_MB = 15;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

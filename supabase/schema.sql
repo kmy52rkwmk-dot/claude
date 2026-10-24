@@ -51,6 +51,13 @@ create index if not exists comments_post_created_idx on public.comments (post_id
 alter table public.posts    enable row level security;
 alter table public.comments enable row level security;
 
+-- Table access for the website (the policies below still decide which rows).
+-- Needed on projects that don't expose new tables to the API automatically.
+grant usage on schema public to anon, authenticated;
+grant select, insert on public.posts    to anon, authenticated;
+grant select, insert on public.comments to anon, authenticated;
+grant delete on public.posts, public.comments to authenticated;
+
 create policy "Anyone can read posts"
   on public.posts for select using (true);
 
