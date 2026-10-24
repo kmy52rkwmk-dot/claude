@@ -59,7 +59,7 @@ The site uses [Supabase](https://supabase.com) (free tier is enough) to store po
 It's a static site, so any free host works:
 
 - **Netlify Drop** — drag the whole folder onto <https://app.netlify.com/drop>. Done.
-- **GitHub Pages** — already set up: `.github/workflows/pages.yml` republishes the site on every push to `main` (one-time setting: repo Settings → Pages → Source: **GitHub Actions**). Live at <https://kmy52rkwmk-dot.github.io/claude/>.
+- **GitHub Pages** — already set up: repo Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`. Every push to `main` republishes the site. Live at <https://kmy52rkwmk-dot.github.io/claude/>.
 - **Vercel / Cloudflare Pages** — import the folder, no build command.
 
 Then put the link in Omar's Instagram bio.
