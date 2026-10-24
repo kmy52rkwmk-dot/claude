@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Omar Alshaer — Engineer &amp; Photographer</title>
+  <meta name="description" content="Photography by Engineer Omar Alshaer (@3mar_alshaer). Browse his work, leave comments and share your own photos with the community.">
+  <meta name="theme-color" content="#0a0c0f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Omar Alshaer — Engineer &amp; Photographer">
+  <meta property="og:description" content="Photos, comments and a community space by @3mar_alshaer.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c0f'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23fff'%3EOA%3C/text%3E%3Crect x='48' y='48' width='8' height='8' rx='2' fill='%23ff8a3d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Reem+Kufi:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var savedTheme = JSON.parse(localStorage.getItem("oa_theme"));
+      if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" data-bind="initials">OA</span>
+        <span class="brand-text">
+          <span data-bind="name">Omar Alshaer</span>
+          <small class="mono"><span data-bind="title">Engineer</span> · Photographer</small>
+        </span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#community">Community</a>
+        <a href="#connect">Connect</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle theme"></button>
+        <a class="btn btn-accent btn-sm nav-cta" href="#community"><span data-icon="camera"></span>Share a photo</a>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" data-icon="menu"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="cad-x" aria-hidden="true"></div>
+      <div class="cad-y" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow mono"><span class="dot"></span><span data-bind="title">Engineer</span> · Photographer</p>
+          <h1 class="hero-name">
+            <span class="l1" data-bind="first-name">Omar</span>
+            <span class="l2" data-bind="last-name">Alshaer</span>
+          </h1>
+          <p class="hero-ar" lang="ar" dir="rtl" data-bind="name-ar" data-hide-empty>عمر الشاعر</p>
+          <p class="hero-tagline" data-bind="tagline"></p>
+          <div class="hero-cta">
+            <a class="btn btn-accent" href="#work">View photos <span data-icon="arrowDown"></span></a>
+            <a class="btn btn-ghost" id="hero-ig" target="_blank" rel="noopener noreferrer" hidden><span data-icon="instagram"></span><span id="hero-ig-handle"></span></a>
+          </div>
+          <dl class="stats">
+            <div><dt class="mono">Photos</dt><dd id="stat-photos">0</dd></div>
+            <div><dt class="mono">Shared</dt><dd id="stat-community">0</dd></div>
+            <div><dt class="mono">Comments</dt><dd id="stat-comments">0</dd></div>
+          </dl>
+        </div>
+
+        <figure class="viewfinder" id="hero-frame">
+          <button class="vf-media" id="hero-photo-btn" type="button" aria-label="Open the latest photo">
+            <img id="hero-photo" alt="">
+            <span class="vf-empty mono">Photos coming soon</span>
+          </button>
+          <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+          <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+          <span class="vf-cross" aria-hidden="true"></span>
+          <span class="vf-dim" aria-hidden="true"><span class="mono">4 : 5</span></span>
+          <figcaption class="vf-cap mono"><span>FIG. 01 — Latest</span><span id="hero-photo-date"></span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-readout mono" id="readout" aria-hidden="true">X 0000 · Y 0000</div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">01 — Work</p>
+          <h2>Through the lens</h2>
+          <p class="section-sub">Photos by <span data-bind="first-name">Omar</span>. Open any shot to like it or join the conversation.</p>
+        </header>
+
+        <div class="owner-only owner-panel">
+          <p class="owner-label mono"><span data-icon="lock"></span>Owner · Publish a new photo</p>
+          <div id="owner-composer"></div>
+        </div>
+
+        <div class="grid" id="work-grid" aria-live="polite"></div>
+        <p class="empty" id="work-empty" hidden>No photos yet — check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">02 — About</p>
+          <h2>Spec sheet</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <div class="avatar-xl" id="about-avatar"></div>
+            <h3 data-bind="name">Omar Alshaer</h3>
+            <p class="about-role mono"><span data-bind="title">Engineer</span> · Photographer</p>
+            <p class="about-ar" lang="ar" dir="rtl" data-bind="name-ar" data-hide-empty></p>
+          </div>
+          <div class="about-body reveal">
+            <div class="about-text" id="about-text"></div>
+            <dl class="specs" id="specs"></dl>
+            <ul class="chips" id="interests"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITY ============ -->
+    <section class="section section-alt" id="community">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">03 — Community</p>
+          <h2>Share your shot</h2>
+          <p class="section-sub">This space belongs to everyone. Post a photo, say hello, and comment on what others share.</p>
+        </header>
+
+        <div class="reveal" id="community-composer"></div>
+
+        <div class="feed-head">
+          <h3>Latest from the community</h3>
+          <span class="mono muted" id="community-count"></span>
+        </div>
+        <div class="grid" id="community-grid" aria-live="polite"></div>
+        <p class="empty" id="community-empty" hidden>Nothing shared yet — be the first ✦</p>
+      </div>
+    </section>
+
+    <!-- ============ CONNECT ============ -->
+    <section class="section" id="connect">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">04 — Connect</p>
+          <h2>Find <span data-bind="first-name">Omar</span> online</h2>
+        </header>
+        <ul class="links" id="links"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-mark" aria-hidden="true" data-bind="name">Omar Alshaer</p>
+      <div class="footer-inner">
+        <span class="mono">© <span id="year"></span> <span data-bind="name">Omar Alshaer</span></span>
+        <span class="mono">Engineered with care</span>
+        <button class="link-btn mono" id="owner-btn" type="button">Owner login</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ PHOTO VIEWER ============ -->
+  <dialog class="viewer" id="viewer" aria-label="Photo viewer">
+    <div class="viewer-shell">
+      <button class="icon-btn viewer-close" type="button" data-close aria-label="Close" data-icon="close"></button>
+      <div class="viewer-media" id="viewer-media">
+        <img id="viewer-img" alt="">
+        <span class="burst" id="burst" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+        <span class="viewer-fig mono" id="viewer-fig"></span>
+        <button class="viewer-nav prev" type="button" aria-label="Previous photo" data-icon="left"></button>
+        <button class="viewer-nav next" type="button" aria-label="Next photo" data-icon="right"></button>
+      </div>
+      <aside class="viewer-side">
+        <header class="viewer-head" id="viewer-who"></header>
+        <div class="viewer-body">
+          <p class="viewer-caption" id="viewer-caption"></p>
+          <div class="viewer-actions">
+            <button class="like-btn" id="like-btn" type="button" aria-pressed="false"><span data-icon="heart"></span><span id="like-count">0</span></button>
+            <span class="meta-pill"><span data-icon="comment"></span><span id="viewer-ccount">0</span></span>
+            <button class="icon-btn danger owner-only" id="delete-post" type="button" aria-label="Delete this post" data-icon="trash"></button>
+          </div>
+          <ol class="comment-list" id="comment-list"></ol>
+        </div>
+        <form class="comment-form" id="comment-form" novalidate>
+          <input class="name-field" name="name" placeholder="Your name" maxlength="40" autocomplete="name" aria-label="Your name">
+          <div class="comment-row">
+            <input name="body" placeholder="Add a comment…" maxlength="500" autocomplete="off" aria-label="Comment">
+            <button class="btn btn-accent btn-icon" type="submit" aria-label="Post comment" data-icon="send"></button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </dialog>
+
+  <!-- ============ OWNER LOGIN ============ -->
+  <dialog class="modal" id="login" aria-label="Owner login">
+    <div class="modal-card">
+      <button class="icon-btn modal-x" type="button" data-close aria-label="Close" data-icon="close"></button>
+      <div id="login-body"></div>
+    </div>
+  </dialog>
+
+  <!-- ============ COMPOSER TEMPLATE ============ -->
+  <template id="composer-tpl">
+    <form class="composer" novalidate>
+      <div class="drop" role="button" tabindex="0" aria-label="Choose a photo">
+        <input class="drop-input" type="file" accept="image/jpeg,image/png,image/webp,image/*" hidden>
+        <div class="drop-empty">
+          <span class="drop-icon" data-icon="upload"></span>
+          <strong>Drop a photo here</strong>
+          <span class="muted">or click to browse</span>
+          <small class="mono">JPG · PNG · WEBP</small>
+        </div>
+        <img class="drop-preview" alt="Selected photo preview" hidden>
+        <button class="icon-btn drop-clear" type="button" aria-label="Remove photo" data-icon="close" hidden></button>
+        <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+        <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+      </div>
+      <div class="composer-fields">
+        <div class="composer-head">
+          <h3 class="composer-title"></h3>
+          <p class="composer-sub muted"></p>
+        </div>
+        <label class="field name-field"><span class="mono">Your name</span><input name="name" maxlength="40" autocomplete="name" placeholder="e.g. Ahmed"></label>
+        <label class="field"><span class="mono">Caption</span><textarea name="caption" rows="3" maxlength="500" placeholder="Tell us about this photo…"></textarea></label>
+        <div class="composer-foot">
+          <small class="mono muted composer-note"></small>
+          <button class="btn btn-accent" type="submit"><span data-icon="send"></span><span class="label">Share photo</span></button>
+        </div>
+      </div>
+    </form>
+  </template>
+
+  <div class="demo-pill" id="demo-pill" hidden>
+    <span class="dot"></span>
+    <span><strong>Demo mode</strong> — posts &amp; comments are saved in this browser only.</span>
+    <button class="link-btn" id="demo-reset" type="button">Reset</button>
+    <button class="icon-btn icon-btn-sm" id="demo-close" type="button" aria-label="Hide" data-icon="close"></button>
+  </div>
+
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
